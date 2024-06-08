@@ -1,47 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amaucher <amaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 14:22:27 by amaucher          #+#    #+#             */
-/*   Updated: 2024/06/08 19:24:54 by amaucher         ###   ########.fr       */
+/*   Updated: 2024/06/08 17:10:58 by amaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Polymorphism:
-- the ability of objects to take on multiple forms
-- allows objects of different classes to be treated as objects
-of a common base class
-*/
+#ifndef WRONGCAT_HPP
+#define WRONGCAT_HPP
 
-#include "Animal.hpp"
-#include "Dog.hpp"
-#include "Cat.hpp"
-#include "WrongCat.hpp"
 #include "WrongAnimal.hpp"
-#include "Brain.hpp"
 
-int main(void)
+/* this derived WrongCat class inherits from WrongAnimal */
+
+class WrongCat : public WrongAnimal
 {
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	
-    delete  j;
-    delete  i;
+	private:
 
-	Dog basic;
-    {
-        Dog tmp = basic;
-    }
+	public:
+		WrongCat(void);
+		~WrongCat(void);
 
-    const Animal* animals[4] = {new Dog(), new Dog(), new Cat(), new Cat()};
-    for (int i = 0; i < 4; i++) 
-	{
-        delete animals[i];
-    }
+		void	makeSound(void) const;
+};
 
-    return 0;
-}
+#endif

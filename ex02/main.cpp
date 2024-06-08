@@ -6,16 +6,9 @@
 /*   By: amaucher <amaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 14:22:27 by amaucher          #+#    #+#             */
-/*   Updated: 2024/06/08 19:24:54 by amaucher         ###   ########.fr       */
+/*   Updated: 2024/06/08 19:27:34 by amaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-Polymorphism:
-- the ability of objects to take on multiple forms
-- allows objects of different classes to be treated as objects
-of a common base class
-*/
 
 #include "Animal.hpp"
 #include "Dog.hpp"
@@ -24,9 +17,17 @@ of a common base class
 #include "WrongAnimal.hpp"
 #include "Brain.hpp"
 
-int main(void)
+/*
+To instantiate a class means to create an object (or instance) of that class
+e.g. Animal cat; // Instantiating an Animal object named cat
+*/
+
+int main()
 {
-	const Animal* j = new Dog();
+	// test that 'Animal' class is non-instantiable by attempting to create an
+	// instance of it directly; not possible because of purely virtual destructor
+	// Animal a; // This line will result in a compilation error
+    const Animal* j = new Dog();
 	const Animal* i = new Cat();
 	
     delete  j;
@@ -42,6 +43,6 @@ int main(void)
 	{
         delete animals[i];
     }
-
-    return 0;
+	
+	return 0;
 }
