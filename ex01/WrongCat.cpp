@@ -6,7 +6,7 @@
 /*   By: amaucher <amaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 14:22:27 by amaucher          #+#    #+#             */
-/*   Updated: 2024/06/08 17:11:14 by amaucher         ###   ########.fr       */
+/*   Updated: 2024/06/19 17:28:09 by amaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,22 @@ WrongCat::~WrongCat(void)
 void	WrongCat::makeSound(void) const
 {
     std::cout << "Meowwww meowwwww!" << std::endl;
+}
+
+// Copy constructor: initializes a new 'Animal' object as a copy of an existing object
+WrongCat::WrongCat(const WrongCat& src)
+{
+    std::cout << "Wrong Cat copy constructor called" << std::endl;
+    *this = src;
+}
+
+// Copy assignment operator
+WrongCat& WrongCat::operator=(const WrongCat& other)
+{
+    std::cout << "Wrong Cat assignment operator called" << std::endl;
+    if (this != &other)
+	{
+        this->_type = other._type;
+    }
+    return *this;
 }

@@ -6,7 +6,7 @@
 /*   By: amaucher <amaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 14:22:27 by amaucher          #+#    #+#             */
-/*   Updated: 2024/06/08 17:04:29 by amaucher         ###   ########.fr       */
+/*   Updated: 2024/06/19 17:20:23 by amaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ class Animal
 		Animal& operator=(const Animal &other);
 		// Destructor (in this case no dynamically allocated resources)
 		virtual ~Animal(void);
-		
+	
 		// virtual function: function in a base class that is expected to be overridden by derived classes
 		virtual void makeSound(void) const;
 		std::string getType(void) const;
