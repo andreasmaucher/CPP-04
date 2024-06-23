@@ -6,7 +6,7 @@
 /*   By: amaucher <amaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 14:22:27 by amaucher          #+#    #+#             */
-/*   Updated: 2024/06/08 19:15:01 by amaucher         ###   ########.fr       */
+/*   Updated: 2024/06/23 15:59:58 by amaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ Animal::Animal(const Animal& src)
 Animal& Animal::operator=(const Animal& other)
 {
     std::cout << "Animal assignment operator called" << std::endl;
-    if ( this != &other)
+    if (this != &other)
 	{
         this->_type = other._type;
     }

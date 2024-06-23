@@ -6,7 +6,7 @@
 /*   By: amaucher <amaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 14:22:27 by amaucher          #+#    #+#             */
-/*   Updated: 2024/06/08 19:27:34 by amaucher         ###   ########.fr       */
+/*   Updated: 2024/06/23 16:49:55 by amaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,13 @@ int main()
     delete  j;
     delete  i;
 
+	std::cout << "-----" << std::endl;
 	Dog basic;
     {
         Dog tmp = basic;
     }
-
+	
+	std::cout << "-----" << std::endl;
     const Animal* animals[4] = {new Dog(), new Dog(), new Cat(), new Cat()};
     for (int i = 0; i < 4; i++) 
 	{

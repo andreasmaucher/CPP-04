@@ -6,7 +6,7 @@
 /*   By: amaucher <amaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 14:22:27 by amaucher          #+#    #+#             */
-/*   Updated: 2024/06/08 18:58:07 by amaucher         ###   ########.fr       */
+/*   Updated: 2024/06/23 16:26:36 by amaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ Dog::~Dog(void)
     std::cout << this->_type << " destructor called" << std::endl;
 }
 
-void	Dog::makeSound( void ) const
+void	Dog::makeSound(void) const
 {
     std::cout << "Woof woof!" << std::endl;
 }

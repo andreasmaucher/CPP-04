@@ -6,7 +6,7 @@
 /*   By: amaucher <amaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 14:22:27 by amaucher          #+#    #+#             */
-/*   Updated: 2024/06/08 18:36:07 by amaucher         ###   ########.fr       */
+/*   Updated: 2024/06/23 16:47:11 by amaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Brain::Brain(Brain const& src)
 Brain& Brain::operator=(Brain const & other)
 {
     std::cout << "Brain assignment operator called" << std::endl;
-    if ( this != &other)
+    if (this != &other)
 	{
 		for (int i = 0; i < 100; i++)
 		{
